@@ -26,6 +26,16 @@ const handleLoadVideo=async(categoryId)=>{
 }
 const handleDisplayVideo=(video)=>{
     console.log('video')
+    const noDataContainer=document.getElementById('no-data-container')
+    if(video.length===0){
+        noDataContainer.classList.add('flex')
+        noDataContainer.classList.remove('hidden')
+    }
+    else{
+        noDataContainer.classList.add('hidden')
+        noDataContainer.classList.remove('flex')
+    }
+
     const videoContainer=document.getElementById('video-container')
     videoContainer.textContent=''
     video.forEach(videos=>{
