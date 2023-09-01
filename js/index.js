@@ -25,7 +25,7 @@ const handleLoadVideo=async(categoryId)=>{
     
 }
 const handleDisplayVideo=(video)=>{
-    // console.log('video')
+    console.log('video')
     const videoContainer=document.getElementById('video-container')
     videoContainer.textContent=''
     video.forEach(videos=>{
@@ -40,7 +40,10 @@ const handleDisplayVideo=(video)=>{
             <img class="w-10 h-10  rounded-full" src="${videos.authors[0].profile_picture}" alt="">
             <div>
                 <h3 class="text-base text-[#171717] font-bold mb-2 w-[260px] mx-auto">${videos.title}</h3>
-                <h5 class="text-sm text-[#111111B2] mb-2">${videos.authors[0].profile_name}</h5>
+                <div class="flex gap-2 items-center mb-2">
+                <h5 class="text-sm text-[#111111B2]">${videos.authors[0].profile_name}</h5>
+               ${videos.authors[0].verified ? '<img src="./image/fi_10629607.svg" alt="">' : ''}
+                </div>
                 <p class="text-sm text-[#111111B2]">${videos.others.views}</p>
             </div>
         </div>
