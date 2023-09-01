@@ -1,3 +1,5 @@
+let currentData = [];
+
 const loadCategory=async()=>{
     const res= await fetch(`https://openapi.programming-hero.com/api/videos/categories`)
     const data= await res.json()
@@ -21,11 +23,11 @@ const handleLoadVideo=async(categoryId)=>{
     const res= await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`)
     const data = await res.json()
     const video= data.data
+    currentData = video
     handleDisplayVideo(video)
     
 }
 const handleDisplayVideo=(video)=>{
-    console.log('video')
     const noDataContainer=document.getElementById('no-data-container')
     if(video.length===0){
         noDataContainer.classList.add('flex')
@@ -62,6 +64,16 @@ const handleDisplayVideo=(video)=>{
         videoContainer.appendChild(videoDiv)
     })
 
+}
+const sortByLoad= ()=>{
+   const sortedData = currentData.sort((a, b) => {
+        const v1 =parseFloat(a.others.views)
+        const v2 = parseFloat(b.others.views)
+
+        return v2-v1;
+    })
+
+    handleDisplayVideo(sortedData)
 }
 loadCategory()
 handleLoadVideo("1000")

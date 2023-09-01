@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcake">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,60 +10,93 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google fonts inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
- <!-- tailwind custom design  -->
- <style>
-    .font-inter{
-        font-family: 'Inter', sans-serif;
-    }
-</style>
+    <!-- tailwind custom design  -->
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
+
 <body class="font-inter mb-28">
     <header class="container mx-auto">
         <!-- navbar related section -->
         <div class="flex items-center justify-between mt-12 mb-8 px-3 lg:px-0">
-           <div> 
-            <img src="./image/Logo.png" alt="">
-        </div>
-            <div class="text-[#FFF] text-sm lg:text-lg font-medium bg-[#FF1F3D] rounded px-4 py-2 lg:px-5 lg:py-3">
-                <a href="index.html">Home Page</a>
+            <div>
+                <img src="./image/Logo.png" alt="">
+            </div>
+            <div>
+                <button onclick="window.location.href='index.html'"
+                    class="text-[#FFF] text-sm lg:text-lg font-medium bg-[#FF1F3D] rounded px-4 py-2 lg:px-5 lg:py-3">Home
+                    Page</button>
             </div>
         </div>
         <div class="border-b border-[#17171733] mb-8 mx-3 lg:mx-0"></div>
     </header>
     <main class="container mx-auto">
-       <section class="px-3">
-        <section>
-            <h1 class="text-2xl font-bold">Q-1: Discuss the scope of var, let, and const</h1>
-            <p class="text-lg font-medium"><span class="font-bold text-xl">Ans:</span> In JavaScript, var, let, and const are used to declare variables, and they have different scopes and behaviors:</p>
-            <p class="text-Xl font-bold">1. var</p>
-            <p class="text-lg font-medium">var declarations are function-scoped, meaning they are only accessible within the function in which they are declared.If a var variable is declared outside of any function, it becomes a global variable and can be accessed from anywhere in the script.Variables declared with var are hoisted, which means their declarations are moved to the top of the function or global scope during the compilation phase. However, the initialization remains in its original place.</p>
+        <section class="px-3">
+            <section>
+                <h1 class="text-2xl font-bold">Q-1: Discuss the scope of var, let, and const</h1>
+                <p class="text-lg font-medium"><span class="font-bold text-xl">Ans:</span> In JavaScript, var, let, and
+                    const are used to declare variables, and they have different scopes and behaviors:</p>
+                <p class="text-Xl font-bold">1. var</p>
+                <p class="text-lg font-medium">var declarations are function-scoped, meaning they are only accessible
+                    within the function in which they are declared.If a var variable is declared outside of any
+                    function, it becomes a global variable and can be accessed from anywhere in the script.Variables
+                    declared with var are hoisted, which means their declarations are moved to the top of the function
+                    or global scope during the compilation phase. However, the initialization remains in its original
+                    place.</p>
 
                 <p class="text-Xl font-bold">2. let</p>
-                <p class="text-lg font-medium">let declarations are block-scoped, meaning they are only accessible within the block (a block is typically defined by curly braces {}) in which they are declared.Variables declared with let are not hoisted in the same way as var. They are hoisted, but they are not initialized until their declaration statement is executed.</p>  
-                    
-                    <p class="text-Xl font-bold">3. const</p>
-                    <p class="text-lg font-medium"> declarations are also block-scoped, like let.Variables declared with const must be initialized when declared, and their values cannot be reassigned after initialization. However, if a const variable holds an object or array, the properties or elements of the object or array can be modified.</p> 
-        </section>
-        <section>
-            <h1 class="text-2xl font-bold mt-6">Q-2: Tell us the use cases of null and undefined</h1>
-            <p class="text-lg font-medium"><span class="font-bold text-xl">Ans:</span> The common use cases for null and undefined in JavaScript:</p>
+                <p class="text-lg font-medium">let declarations are block-scoped, meaning they are only accessible
+                    within the block (a block is typically defined by curly braces {}) in which they are
+                    declared.Variables declared with let are not hoisted in the same way as var. They are hoisted, but
+                    they are not initialized until their declaration statement is executed.</p>
 
-            <p class="text-Xl font-bold">1. null</p>
-                    <p class="text-lg font-medium"> Use null when you want to explicitly indicate the absence of a value or an empty object reference.It can be used to reset or clear a variable that previously held an object reference.It's often used in situations where you want to represent an intentional lack of data or to handle optional values.</p> 
+                <p class="text-Xl font-bold">3. const</p>
+                <p class="text-lg font-medium"> declarations are also block-scoped, like let.Variables declared with
+                    const must be initialized when declared, and their values cannot be reassigned after initialization.
+                    However, if a const variable holds an object or array, the properties or elements of the object or
+                    array can be modified.</p>
+            </section>
+            <section>
+                <h1 class="text-2xl font-bold mt-6">Q-2: Tell us the use cases of null and undefined</h1>
+                <p class="text-lg font-medium"><span class="font-bold text-xl">Ans:</span> The common use cases for null
+                    and undefined in JavaScript:</p>
 
-                    <p class="text-Xl font-bold">2. undefined</p>
-                    <p class="text-lg font-medium"> undefined typically represents a variable that has been declared but hasn't been assigned a value. It's automatically assigned to variables that have not been initialized or function parameters that haven't received a value.You may also encounter undefined as a default return value for functions that do not explicitly return anything.</p> 
+                <p class="text-Xl font-bold">1. null</p>
+                <p class="text-lg font-medium"> Use null when you want to explicitly indicate the absence of a value or
+                    an empty object reference.It can be used to reset or clear a variable that previously held an object
+                    reference.It's often used in situations where you want to represent an intentional lack of data or
+                    to handle optional values.</p>
+
+                <p class="text-Xl font-bold">2. undefined</p>
+                <p class="text-lg font-medium"> undefined typically represents a variable that has been declared but
+                    hasn't been assigned a value. It's automatically assigned to variables that have not been
+                    initialized or function parameters that haven't received a value.You may also encounter undefined as
+                    a default return value for functions that do not explicitly return anything.</p>
+            </section>
+            <section>
+                <h1 class="text-2xl font-bold mt-6">Q-3: What do you mean by REST API?</h1>
+                <p class="text-lg font-medium"><span class="font-bold text-xl">Ans:</span> REST API, or Representational
+                    State Transfer Application Programming Interface, is a set of architectural principles for designing
+                    networked applications. It is an approach to building web services that use the HTTP protocol to
+                    enable communication between different systems or software components.<br><br> REST APIs are based
+                    on a few key principles, including the use of standard HTTP methods (GET, POST, PUT, DELETE) for
+                    performing actions on resources, a stateless client-server communication model, and the
+                    representation of resources as URLs. Data is typically exchanged in common formats like JSON or
+                    XML.<br><br> REST APIs are widely used in web development because of their simplicity, scalability,
+                    and ease of use. They facilitate interoperability between different systems and allow for the
+                    creation of web services that can be accessed by a variety of clients, including web browsers,
+                    mobile apps, and other software applications.</p>
+            </section>
         </section>
-        <section>
-            <h1 class="text-2xl font-bold mt-6">Q-3: What do you mean by REST API?</h1>
-            <p class="text-lg font-medium"><span class="font-bold text-xl">Ans:</span> REST API, or Representational State Transfer Application Programming Interface, is a set of architectural principles for designing networked applications. It is an approach to building web services that use the HTTP protocol to enable communication between different systems or software components.<br><br> REST APIs are based on a few key principles, including the use of standard HTTP methods (GET, POST, PUT, DELETE) for performing actions on resources, a stateless client-server communication model, and the representation of resources as URLs. Data is typically exchanged in common formats like JSON or XML.<br><br> REST APIs are widely used in web development because of their simplicity, scalability, and ease of use. They facilitate interoperability between different systems and allow for the creation of web services that can be accessed by a variety of clients, including web browsers, mobile apps, and other software applications.</p>
-        </section>
-       </section>
-        
+
     </main>
     <script src="js/index.js"></script>
 </body>
+
 </html>

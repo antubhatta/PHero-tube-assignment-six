@@ -29,10 +29,10 @@
             <img src="./image/Logo.png" alt="">
         </div>
             <div class="text-[#252525] text-sm lg:text-lg font-medium bg-[#2525263C] rounded px-4 py-2 lg:px-5 lg:py-3">
-                <button>Sort by view</button>
+                <button onclick="sortByLoad()">Sort by view</button>
             </div>
-            <div class="text-[#FFF] text-sm lg:text-lg font-medium bg-[#FF1F3D] rounded px-4 py-2 lg:px-5 lg:py-3">
-                <a href="blog.html">Blog</a>
+            <div class="lg:ml-32">
+               <button onclick="window.location.href='blog.html'" class="text-[#FFF] text-sm lg:text-lg font-medium bg-[#FF1F3D] rounded px-4 py-2 lg:px-5 lg:py-3">Blog</button>
             </div>
         </div>
         <div class="border-b border-[#17171733] mb-8 mx-3 lg:mx-0"></div>
@@ -67,7 +67,7 @@
         </section>
 
          <!-- no data found -->
-         <div id="no-data-container" class="hidden flex-col gap-8 justify-center items-center lg:h-[calc(100vh-350px)]">
+         <div id="no-data-container" class="hidden flex-col gap-8 justify-center items-center h-[calc(100vh-350px)]">
             <img class="" src="./image/Icon.png" alt="">
             <h3 class="font-bold text-xl lg:text-3xl w-[240px] lg:w-[433px] text-center">Oops!! Sorry, There is no content here</h3>
         </div>
