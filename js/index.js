@@ -45,11 +45,14 @@ const handleDisplayVideo=(video)=>{
         const videoDiv=document.createElement('div')
         videoDiv.innerHTML=`
         <div class="px-3">
-        <div class="mb-7">
+        <div class="relative">
             <img class="rounded-lg w-full h-[200px]" src="${videos.thumbnail}" alt="">
+       ${ videos.others.posted_date && `<div class="absolute bottom-2 right-2 text-xs text-[#FFF] bg-[#171717] rounded p-1 ">
+            <p class="">${secondsConversion(videos.others.posted_date)}</p>
+            </div>` }
         </div>
-        <div class="flex gap-3">
-            <img class="w-10 h-10  rounded-full" src="${videos.authors[0].profile_picture}" alt="">
+        <div class="flex gap-3 mt-7">
+            <img class="w-10 h-10 rounded-full bg-cover" src="${videos.authors[0].profile_picture}" alt="">
             <div>
                 <h3 class="text-base text-[#171717] font-bold mb-2 w-[260px] mx-auto">${videos.title}</h3>
                 <div class="flex gap-2 items-center mb-2">
@@ -74,6 +77,12 @@ const sortByLoad= ()=>{
     })
 
     handleDisplayVideo(sortedData)
+}
+const secondsConversion=(second)=>{
+    const hours= Math.floor(second/3600)
+    const remainingSeconds= (second % 3600)
+    const minute= Math.floor(remainingSeconds/60)
+    return `${hours}hrs ${minute} mins ago`
 }
 loadCategory()
 handleLoadVideo("1000")
