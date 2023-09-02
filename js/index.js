@@ -44,7 +44,7 @@ const handleDisplayVideo = (video) => {
         console.log(videos)
         const videoDiv = document.createElement('div')
         videoDiv.innerHTML = `
-        <div class="px-5">
+        <div class="px-5 lg:px-0">
         <div class="relative">
             <img class="rounded-lg w-full h-[200px]" src="${videos.thumbnail}" alt="">
        ${videos.others.posted_date && `<div class="absolute bottom-2 right-2 text-xs text-[#FFF] bg-[#171717] rounded p-1 ">
