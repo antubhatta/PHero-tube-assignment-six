@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcake">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>86-PHero-tube</title>
     <!-- favicon -->
     <link rel="icon" type="images/png" href="./image/Logo.png" />
     <!-- tailwind daisy ui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google fonts inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- tailwind custom design  -->
     <style>
-        .font-inter {
-            font-family: 'Inter', sans-serif;
-        }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
     </style>
-</head>
+  </head>
 
-<body class="font-inter mb-28 w-screen overflow-x-hidden">
-    <header class="container mx-auto ">
-        <!-- navbar related section -->
-        <div class="flex flex-wrap items-center justify-between mt-12 mb-8 px-5 lg:px-0">
-            <div>
-                <img src="./image/Logo.png" alt="">
-            </div>
-            <div onclick="sortByLoad()"
-                class="text-[#252525] text-sm lg:text-lg font-medium bg-[#2525263C] rounded px-4 py-2 lg:px-5 ">
-                <button>Sort by view</button>
-            </div>
-            <div class="lg:ml-32">
-                <button onclick="window.location.href='blog.html'"
-                    class="text-[#FFF] text-sm lg:text-lg font-medium bg-[#FF1F3D] rounded px-4 py-2 lg:px-5 ">Blog</button>
-            </div>
+  <body class="font-inter pb-28 overflow-x-hidden w-full">
+    <header class="container mx-auto">
+      <!-- navbar related section -->
+      <div
+        class="flex flex-wrap items-center justify-between mt-12 mb-8 px-5 lg:px-0"
+      >
+        <div>
+          <img src="./image/Logo.png" alt="" />
         </div>
-        <div class="border-b border-[#17171733] mb-8 mx-5 lg:mx-0"></div>
+        <div
+          onclick="sortByLoad()"
+          class="text-[#252525] text-sm lg:text-lg font-medium bg-[#2525263C] rounded px-4 py-2 lg:px-5"
+        >
+          <button>Sort by view</button>
+        </div>
+        <div class="lg:ml-32">
+          <button
+            onclick="window.location.href='blog.html'"
+            class="text-[#FFF] text-sm lg:text-lg font-medium bg-[#FF1F3D] rounded px-4 py-2 lg:px-5"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+      <div class="border-b border-[#17171733] mb-8 mx-5 lg:mx-0"></div>
     </header>
     <main class="container mx-auto">
-        <!-- category section -->
-        <section>
-            <div id="tab-container" class="text-center flex flex-wrap gap-6 justify-center mb-10">
+      <!-- category section -->
+      <section>
+        <div
+          id="tab-container"
+          class="text-center flex flex-wrap gap-6 justify-center mb-10"
+        ></div>
+      </section>
+      <!-- card section -->
+      <section>
+        <div
+          id="video-container"
+          class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        ></div>
+      </section>
 
-            </div>
-        </section>
-        <!-- card section -->
-        <section>
-            <div id="video-container" class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            </div>
-        </section>
-
-        <!-- no data found -->
-        <div id="no-data-container" class="hidden flex-col gap-8 justify-center items-center h-[calc(100vh-350px)]">
-            <img class="" src="./image/Icon.png" alt="">
-            <h3 class="font-bold text-xl lg:text-3xl w-[240px] lg:w-[433px] text-center">Oops!! Sorry, There is no
-                content here</h3>
-        </div>
+      <!-- no data found -->
+      <div
+        id="no-data-container"
+        class="hidden flex-col gap-8 justify-center items-center h-[calc(100vh-350px)]"
+      >
+        <img class="" src="./image/Icon.png" alt="" />
+        <h3
+          class="font-bold text-xl lg:text-3xl w-[240px] lg:w-[433px] text-center"
+        >
+          Oops!! Sorry, There is no content here
+        </h3>
+      </div>
     </main>
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>
